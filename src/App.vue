@@ -3,19 +3,29 @@
   <HelloWorld msg="Curso Vue Matheus Battisti"/>
   <InputsDataBinding/>
   <LifeCycle/>
+  <AtributosDinamicos/>
+  <RenderListaVFor/>
+  <EventsClickSubmit/>
+
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import InputsDataBinding from './components/Inputs&DataBinding.vue';
 import LifeCycle from './components/LifeCycle.vue';
+import AtributosDinamicos from './components/AtributosDinamicos.vue';
+import RenderListaVFor from './components/RenderListaV-for.vue';
+import EventsClickSubmit from './components/EventsClickSubmit.vue';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     InputsDataBinding,
-    LifeCycle
+    LifeCycle,
+    AtributosDinamicos,
+    RenderListaVFor,
+    EventsClickSubmit
 }
 }
 </script>
