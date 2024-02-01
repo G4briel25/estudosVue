@@ -33,6 +33,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  div {
+    padding: 50px 0;
+    background-color: rgb(167, 65, 167);
+    border: 2px solid darkmagenta;
+    color: #fff;
+  }
 </style>

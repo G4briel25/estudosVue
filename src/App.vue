@@ -6,6 +6,7 @@
   <AtributosDinamicos/>
   <RenderListaVFor/>
   <EventsClickSubmit/>
+  <MultiplosEventos/>
 
 </template>
 
@@ -16,6 +17,7 @@ import LifeCycle from './components/LifeCycle.vue';
 import AtributosDinamicos from './components/AtributosDinamicos.vue';
 import RenderListaVFor from './components/RenderListaV-for.vue';
 import EventsClickSubmit from './components/EventsClickSubmit.vue';
+import MultiplosEventos from './components/MultiplosEventos.vue';
 
 export default {
   name: 'App',
@@ -25,8 +27,9 @@ export default {
     LifeCycle,
     AtributosDinamicos,
     RenderListaVFor,
-    EventsClickSubmit
-}
+    EventsClickSubmit,
+    MultiplosEventos
+  }
 }
 </script>
 
