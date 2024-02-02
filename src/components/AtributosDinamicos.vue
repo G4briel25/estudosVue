@@ -33,7 +33,7 @@
     },
     methods: {
       showEmail() {
-        console.log('CLicado!')
+        console.log('Clicado!')
         this.mostrar_email = !this.mostrar_email
         if (!this.mostrar_email) {
           this.textBotao = 'Mostrar email'

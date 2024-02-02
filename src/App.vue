@@ -1,12 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Curso Vue Matheus Battisti"/>
-  <InputsDataBinding/>
-  <LifeCycle/>
-  <AtributosDinamicos/>
-  <RenderListaVFor/>
-  <EventsClickSubmit/>
-  <MultiplosEventos/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Curso Vue Matheus Battisti"/>
+    <InputsDataBinding/>
+    <LifeCycle/>
+    <AtributosDinamicos/>
+    <RenderListaVFor/>
+    <EventsClickSubmit/>
+    <MultiplosEventos/>
+    <PropsDeTeste :propEmail="propEmailAC" :estar_logado="true" />
+    <EventoEmit/>
+  </div>
 
 </template>
 
@@ -18,6 +22,8 @@ import AtributosDinamicos from './components/AtributosDinamicos.vue';
 import RenderListaVFor from './components/RenderListaV-for.vue';
 import EventsClickSubmit from './components/EventsClickSubmit.vue';
 import MultiplosEventos from './components/MultiplosEventos.vue';
+import PropsDeTeste from './components/PropsDeTeste.vue';
+import EventoEmit from './components/EventoEmit.vue';
 
 export default {
   name: 'App',
@@ -28,8 +34,10 @@ export default {
     AtributosDinamicos,
     RenderListaVFor,
     EventsClickSubmit,
-    MultiplosEventos
-  }
+    MultiplosEventos,
+    PropsDeTeste,
+    EventoEmit
+}
 }
 </script>
 
