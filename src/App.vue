@@ -1,43 +1,33 @@
 <template>
   <div>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Curso Vue Matheus Battisti"/>
-    <InputsDataBinding/>
-    <LifeCycle/>
-    <AtributosDinamicos/>
-    <RenderListaVFor/>
-    <EventsClickSubmit/>
-    <MultiplosEventos/>
-    <PropsDeTeste :propEmail="propEmailAC" :estar_logado="true" />
-    <EventoEmit/>
-  </div>
+    <nav>
+      <RouterLink to="/">Home</RouterLink> |
+      <RouterLink :to="{ name: 'services' }">Serviços</RouterLink> |
+      <RouterLink to="/usuarios/10">Usuário</RouterLink> |
+      <router-link to="/about">About</router-link>
+    </nav>
+    <RouterView/>      
+    
+    <br>
 
+    <ComponentVuex />
+
+    <br>
+
+    <AppProducts />
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import InputsDataBinding from './components/Inputs&DataBinding.vue';
-import LifeCycle from './components/LifeCycle.vue';
-import AtributosDinamicos from './components/AtributosDinamicos.vue';
-import RenderListaVFor from './components/RenderListaV-for.vue';
-import EventsClickSubmit from './components/EventsClickSubmit.vue';
-import MultiplosEventos from './components/MultiplosEventos.vue';
-import PropsDeTeste from './components/PropsDeTeste.vue';
-import EventoEmit from './components/EventoEmit.vue';
+import ComponentVuex from '@/components/ComponentVuex.vue';
+import AppProducts from '@/Products/AppProducts.vue';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    InputsDataBinding,
-    LifeCycle,
-    AtributosDinamicos,
-    RenderListaVFor,
-    EventsClickSubmit,
-    MultiplosEventos,
-    PropsDeTeste,
-    EventoEmit
-}
+  components: { ComponentVuex, AppProducts },
+    data() {
+        return {};
+    }
 }
 </script>
 
@@ -46,8 +36,20 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  margin-top: 60px;
   text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
