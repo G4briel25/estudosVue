@@ -18,7 +18,9 @@
         VUEX Mutations
       </h3>
 
-      <button @click="atualizar()">Atualizar Dados</button>
+      <button @click="updateUser()">Atualizar Dados</button>
+
+      <br><br><br>
 
     </div>
   </div>
@@ -27,24 +29,20 @@
 <script>
 export default {
   name: 'ComponentVuex',
-    created() {
-      // const newUser = {
-      //   name: 'Gabriel',
-      //   email: 'gabriel@gmail.com',
-      //   age: 20
-      // }
+  
+  methods: {
+    updateUser() {
+      const newUser = {
+        name: 'Fulano',
+        email: 'blabla@hotmail.com',
+        age: 99
+      }
       // this.$store.commit('storeUser', newUser)
-    },
-    methods: {
-      atualizar() {
-        const newUser = {
-        name: 'Gabriel',
-        email: 'gabriel@gmail.com',
-        age: 20
-      }
-        this.$store.commit('storeUser', newUser)
-      }
+      this.$store.dispatch('storeUser', newUser).then(() => {
+        console.log('Terminou com sucesso')
+      })
     }
+  }
 }
 </script>
 

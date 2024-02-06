@@ -6,7 +6,7 @@
       <RouterLink to="/usuarios/10">Usuário</RouterLink> |
       <router-link to="/about">About</router-link>
     </nav>
-    <RouterView/>      
+    <RouterView/>
     
     <br>
 
@@ -25,9 +25,6 @@ import AppProducts from '@/Products/AppProducts.vue';
 
 export default {
   components: { ComponentVuex, AppProducts },
-    data() {
-        return {};
-    }
 }
 </script>
 
